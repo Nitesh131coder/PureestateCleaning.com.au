@@ -1,0 +1,18 @@
+/* Small header-only refinement: retains the current palette and layout. */
+.premium-brand {
+  gap: 0.85rem !important;
+}
+.premium-brand img {
+  height: 3.15rem !important;
+  filter: drop-shadow(0 5px 8px rgba(29, 78, 216, 0.18));
+}
+.premium-brand > div:last-child > div:first-child > span:first-child {
+  font-size: 1.35rem !important;
+  letter-spacing: -0.045em;
+  font-weight: 900 !important;
+}
+.premium-brand > div:last-child > div:first-child > span:last-child {
+  border-radius: 0.45rem !important;
+  padding: 0.27rem 0.55rem !important;
+  box-shadow: 0 4px 10px rgba(29, 78, 216, 0.22);
+}
