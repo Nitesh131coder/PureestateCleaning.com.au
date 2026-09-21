@@ -19,6 +19,10 @@
     '/services/bathroom-cleaning/': [['Deep cleaning','/services/deep-cleaning/'], ['Regular house cleaning','/services/regular-house-cleaning/'], ['End-of-lease cleaning','/services/end-of-lease-cleaning/'], ['Request a quote','/contact/']],
     '/services/once-off-cleaning/': [['Deep cleaning','/services/deep-cleaning/'], ['Regular house cleaning','/services/regular-house-cleaning/'], ['End-of-lease cleaning','/services/end-of-lease-cleaning/'], ['Request a quote','/contact/']]
   };
+  const ensureStyles = () => {
+    if (document.querySelector('link[data-seo-related-links-style]')) return;
+    const link = document.createElement('link'); link.rel = 'stylesheet'; link.href = '/seo-related-links.css'; link.dataset.seoRelatedLinksStyle = 'true'; document.head.appendChild(link);
+  };
   const cleanText = () => {
     const replacements = {'Preview Optimized SEO Landing':'View service details','Special Estimate Quote':'Quote on request','Trust Is Our Core Core Currency':'Trust is our core currency'};
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); const nodes = [];
@@ -32,6 +36,7 @@
     section.innerHTML = `<h2>Related cleaning services</h2><p>${items.map(([label,href]) => `<a href="${href}">${label}</a>`).join(' · ')}</p>`; document.body.appendChild(section);
   };
   const swap = () => {
+    ensureStyles();
     document.querySelectorAll('button').forEach(button => { const label = button.textContent.trim(); const href = links[label]; if (!href || button.dataset.urlified) return; const a = document.createElement('a'); a.href = href; a.className = button.className; a.innerHTML = button.innerHTML; if (label === 'Book in 30s') a.textContent = 'Get a Quote'; a.dataset.urlified = 'true'; button.replaceWith(a); });
     const logo = document.querySelector('header div.cursor-pointer.group'); if (logo && !logo.dataset.urlified) { const a = document.createElement('a'); a.href='/'; a.className=`${logo.className} premium-brand`; a.innerHTML=logo.innerHTML; a.dataset.urlified='true'; logo.replaceWith(a); }
     document.querySelectorAll('header a[href="/contact/"]').forEach(a => { if (a.textContent.trim() === 'Book') a.textContent = 'Get a Quote'; });
