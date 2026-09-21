@@ -17,7 +17,12 @@
     '/services/oven-cleaning/': [['End-of-lease cleaning','/services/end-of-lease-cleaning/'], ['Deep cleaning','/services/deep-cleaning/'], ['Airbnb cleaning','/services/airbnb-short-term-rental-cleaning/'], ['Request a quote','/contact/']],
     '/services/window-cleaning/': [['Strata cleaning','/services/strata-common-area-cleaning/'], ['Commercial cleaning','/services/office-commercial-cleaning/'], ['End-of-lease cleaning','/services/end-of-lease-cleaning/'], ['Request a quote','/contact/']],
     '/services/bathroom-cleaning/': [['Deep cleaning','/services/deep-cleaning/'], ['Regular house cleaning','/services/regular-house-cleaning/'], ['End-of-lease cleaning','/services/end-of-lease-cleaning/'], ['Request a quote','/contact/']],
-    '/services/once-off-cleaning/': [['Deep cleaning','/services/deep-cleaning/'], ['Regular house cleaning','/services/regular-house-cleaning/'], ['End-of-lease cleaning','/services/end-of-lease-cleaning/'], ['Request a quote','/contact/']]
+    '/services/once-off-cleaning/': [['Deep cleaning','/services/deep-cleaning/'], ['Regular house cleaning','/services/regular-house-cleaning/'], ['End-of-lease cleaning','/services/end-of-lease-cleaning/'], ['Request a quote','/contact/']],
+    '/services/fortnightly-cleaning/': [['Weekly cleaning','/services/weekly-cleaning/'], ['Regular house cleaning','/services/regular-house-cleaning/'], ['Deep cleaning','/services/deep-cleaning/'], ['Request a quote','/contact/']],
+    '/services/spring-cleaning/': [['Deep cleaning','/services/deep-cleaning/'], ['Once-off cleaning','/services/once-off-cleaning/'], ['Window cleaning','/services/window-cleaning/'], ['Request a quote','/contact/']],
+    '/services/post-construction-cleaning/': [['Deep cleaning','/services/deep-cleaning/'], ['Window cleaning','/services/window-cleaning/'], ['Commercial cleaning','/services/office-commercial-cleaning/'], ['Request a quote','/contact/']],
+    '/services/pre-sale-open-home-cleaning/': [['Deep cleaning','/services/deep-cleaning/'], ['Window cleaning','/services/window-cleaning/'], ['End-of-lease cleaning','/services/end-of-lease-cleaning/'], ['Request a quote','/contact/']],
+    '/services/ndis-cleaning-support/': [['Regular house cleaning','/services/regular-house-cleaning/'], ['Deep cleaning','/services/deep-cleaning/'], ['Once-off cleaning','/services/once-off-cleaning/'], ['Request a quote','/contact/']]
   };
   const ensureStyles = () => {
     if (document.querySelector('link[data-seo-related-links-style]')) return;
