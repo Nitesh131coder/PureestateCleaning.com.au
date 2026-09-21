@@ -1,0 +1,10 @@
+{
+  "name": "Pure Estate Cleaning",
+  "short_name": "Pure Estate Cleaning",
+  "description": "Professional house, deep and end-of-lease cleaning across Sydney.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1d4ed8",
+  "lang": "en-AU"
+}
